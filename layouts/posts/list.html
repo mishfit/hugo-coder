@@ -6,7 +6,7 @@
     <h1 class="title">{{ .Title }}</h1>
 
     <ul>
-      {{- range (.Paginate ( .Pages.ByDate)).Pages -}}
+      {{- range (.Paginate ( .Pages.ByDate.Reverse)).Pages -}}
         {{- .Render "li" -}}
       {{- end -}}
     </ul>
